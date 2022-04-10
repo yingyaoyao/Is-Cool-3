@@ -20,6 +20,19 @@ profit = [
 ]
 
 
+init_window.title("软件工程")  # 窗口名
+init_window.geometry('650x500+40+40')
+
+frameX = Frame(init_window, height=200, relief=GROOVE)  # 操作选择界面
+frameXy = Frame(init_window, height=200)  # 文件选择界面
+frameY = Frame(init_window, width=500, height=100)  # 最优解输出界面
+frameYx = Frame(init_window, width=750, height=200, bg="pink", pady=20)  # 日志界面
+
+frameX.grid(row=0, column=0, padx=20)  # 操作选择界面
+frameXy.grid(row=1, column=0, columnspan=2)  # 文件选择界面
+frameY.grid(row=0, column=1, pady=10)  # 最优解输出界面
+frameYx.grid(row=2, column=0, columnspan=3)  # 日志界面
+
 # 动态规划算法求解0-1背包问题
 class onezerobag:
 
